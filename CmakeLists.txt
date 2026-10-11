@@ -1,0 +1,30 @@
+cmake_minimum_required(VERSION 3.25)
+
+project(AudioReader LANGUAGES CXX)
+
+set(CMAKE_CXX_STANDARD 23)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+
+# Gather all .cpp files in src (exclude tests automatically)
+file(GLOB_RECURSE AUDIO_SOURCES CONFIGURE_DEPENDS
+    "${CMAKE_CURRENT_SOURCE_DIR}/*.cpp"
+)
+
+# Gather test sources
+file(GLOB_RECURSE TEST_SOURCES CONFIGURE_DEPENDS
+    "${CMAKE_CURRENT_SOURCE_DIR}/tests/*.cpp"
+)
+
+foreach(test_file IN LISTS TEST_SOURCES)
+    list(REMOVE_ITEM AUDIO_SOURCES ${test_file})
+endforeach()
+
+add_library(AudioReaderLib ${AUDIO_SOURCES})
+target_include_directories(AudioReaderLib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+
+# Enable and add tests if requested
+if(BUILD_TESTS)
+    enable_testing()
+    add_subdirectory(tests)
+endif()

@@ -1,0 +1,94 @@
+# Build directories
+/build/
+/bin/
+/lib/
+
+# CMake generated files
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# Executables
+*.exe
+*.out
+*.app
+*.so
+*.dll
+*.dylib
+
+# Object files and static libraries
+*.o
+*.obj
+*.a
+*.lib
+
+# Debug files
+*.pdb
+*.idb
+
+# Temporary files
+*.log
+*.tmp
+*.temp
+*.swp
+*~
+
+# Backup files
+*.bak
+*.orig
+*.old
+
+# IDE/editor files
+.vscode/
+.idea/
+*.code-workspace
+*.suo
+*.user
+*.userprefs
+*.vcxproj*
+*.ncb
+*.sdf
+*.opensdf
+
+# MacOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+
+Testing/
+# Added by Git Repo Creator
+# Media, Archives, and AI Models
+*.7z
+*.aac
+*.avi
+*.blend
+*.flac
+*.flv
+*.gz
+*.iso
+*.jpeg
+*.jpg
+*.m4a
+*.mkv
+*.mov
+*.mp3
+*.mp4
+*.ogg
+*.png
+*.rar
+*.tar
+*.wav
+*.webm
+*.wmv
+*.zip
+# Python / Dev
+*.py[cod]
+.env
+.env.local
+
+# Added by Git Repo Creator
+# GitHub Actions
+.github/
